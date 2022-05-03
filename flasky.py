@@ -50,7 +50,7 @@ def test(coverage, test_names):
         COV.erase()
 
 
-@app.cli.command
+@app.cli.command()
 def deploy():
     # 将数据库迁移到最新版本
     upgrade()
