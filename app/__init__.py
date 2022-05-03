@@ -27,6 +27,9 @@ def create_app(config_name):
     db.init_app(app)
     login_manager.init_app(app)
     pagedown.init_app(app)
+    if app.config['SSL_REDIRECT']:
+        from flask_sslify import SSLify
+        sslify = SSLify(app)
 
     from .main import main as main_blueprint
     from .auth import auth as auth_blueprint
