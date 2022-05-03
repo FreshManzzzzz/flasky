@@ -1,1 +1,1 @@
-web: gunicorn flasky:wsgi
+web: gunicorn flasky:app
